@@ -282,8 +282,8 @@ struct numeric_limits<R128>
 {
    static const bool is_specialized = true;
 
-   static R128 min() throw() { return R128_min; }
-   static R128 max() throw() { return R128_max; }
+   static R128 min() noexcept { return R128_min; }
+   static R128 max() noexcept { return R128_max; }
 
    static const int digits = 127;
    static const int digits10 = 38;
@@ -291,8 +291,8 @@ struct numeric_limits<R128>
    static const bool is_integer = false;
    static const bool is_exact = false;
    static const int radix = 2;
-   static R128 epsilon() throw() { return R128_smallest; }
-   static R128 round_error() throw() { return R128_one; }
+   static R128 epsilon() noexcept { return R128_smallest; }
+   static R128 round_error() noexcept { return R128_one; }
 
    static const int min_exponent = 0;
    static const int min_exponent10 = 0;
@@ -307,10 +307,10 @@ struct numeric_limits<R128>
    static const bool has_denorm_loss = false;
 #endif
 
-   static R128 infinity() throw() { return R128_zero; }
-   static R128 quiet_NaN() throw() { return R128_zero; }
-   static R128 signaling_NaN() throw() { return R128_zero; }
-   static R128 denorm_min() throw() { return R128_zero; }
+   static R128 infinity() noexcept { return R128_zero; }
+   static R128 quiet_NaN() noexcept { return R128_zero; }
+   static R128 signaling_NaN() noexcept { return R128_zero; }
+   static R128 denorm_min() noexcept { return R128_zero; }
 
    static const bool is_iec559 = false;
    static const bool is_bounded = true;
